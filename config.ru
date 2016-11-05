@@ -1,2 +1,5 @@
-root = ::File.dirname(__FILE__)
-require ::File.join(root, 'main')
+require 'bundler'
+Bundler.require
+
+require './main'
+run Sinatra::Application

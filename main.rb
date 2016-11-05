@@ -5,7 +5,7 @@ require 'coffee-script'
 
 class Server < Sinatra::Base
   get '/' do
-    @text = 'Hello, Tongue-ya app!'
+    @text = "#{Time.now}"
     haml :index
   end
 end
