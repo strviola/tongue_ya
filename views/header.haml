@@ -1,0 +1,11 @@
+#header.container
+  #logo
+    %h1
+      %a{href: '/'}
+        Toungue-ya
+  #menu
+    %ul
+      - %W(About Project Company Contact).each.with_index(1) do |name, i|
+        %li
+          %a{href: '#', accesskey: "#{i}", title: ""}
+            = "#{name}"

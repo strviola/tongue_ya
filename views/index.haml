@@ -1,34 +1,20 @@
 !!!
 %html
-  %head
-    %meta{"http-equiv" => "Content-Type", content: "text/html, charset=utf-8"}
-    %title Tongue-ya
-    - %W(http://fonts.googleapis.com/css?family=Didact+Gothic stylesheets/default.css stylesheets/fonts.css).each do |uri|
-      %link{rel: "stylesheet", type: "text/css", media: "all", href: "#{uri}"}
+  = haml :headtag
 
   %body
     #header-wrapper
-      #header.container
-        #logo
-          %h1
-            %a{href: '#'}
-              Toungue-ya
-        #menu
-          %ul
-            - %W(About Project Company Contact).each.with_index(1) do |name, i|
-              %li
-                %a{href: '#', accesskey: "#{i}", title: ""}
-                  = "#{name}"
-        #banner.container
-          .title
-            %h2
-              別海ホタテバーガーを、東京で。
-            %span.byline
-              忘れられない思い出の料理を、あなたの側で。
-          %ul.actions
-            %li
-              %a.button{href: '#'}
-                思い出を再現する
+      = haml :header
+      #banner.container
+        .title
+          %h2
+            別海ホタテバーガーを、東京で。
+          %span.byline
+            忘れられない思い出の料理を、あなたの側で。
+        %ul.actions
+          %li
+            %a.button{href: '#'}
+              思い出を再現する
     #wrapper
       #three-column.container
         .title
@@ -65,9 +51,4 @@
           %li
             %a.button{href: '#'}
               思い出を再現する
-    #copylight.container
-      %p
-        &copy; Tongue-ya. All rights reserved.
-        Design by
-        %a{href: "http://templated.co", rel: "nofollow"}
-          TEMPLATED.
+    = haml :footer
