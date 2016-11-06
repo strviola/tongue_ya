@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'haml'
 require 'sass'
 require 'coffee-script'
+require 'rack'
 require 'pry'
 
 class Server < Sinatra::Base
@@ -13,6 +14,9 @@ class Server < Sinatra::Base
   get '/stylesheets/main.css' do
     sass :'assets/css/main'
   end
+
+  # images
+  use Rack::Static, urls: ['/images'], root: 'views'
 end
 
 Server.run!

@@ -3,6 +3,16 @@
   %head
     %title Tongue-ya
     %link{rel: "stylesheet", type: "text/css", href: "stylesheets/main.css"}
+
   %body
-    %h1.title Tongue-ya app
-    %p= @text
+    .title
+      %h1 Tongue-ya
+
+    .concept
+      %p.catch 別海ホタテバーガーを、東京で。
+      %p.submit
+        %a.submit{href: "form"}
+          プロジェクトを提案
+
+    .detail
+      %img.logo{src: "/images/logo.png"}
