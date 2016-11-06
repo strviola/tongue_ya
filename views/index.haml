@@ -1,18 +1,73 @@
 !!!
 %html
   %head
+    %meta{"http-equiv" => "Content-Type", content: "text/html, charset=utf-8"}
     %title Tongue-ya
-    %link{rel: "stylesheet", type: "text/css", href: "stylesheets/main.css"}
+    - %W(http://fonts.googleapis.com/css?family=Didact+Gothic stylesheets/default.css stylesheets/fonts.css).each do |uri|
+      %link{rel: "stylesheet", type: "text/css", media: "all", href: "#{uri}"}
 
   %body
-    .title
-      %h1 Tongue-ya
-
-    .concept
-      %p.catch 別海ホタテバーガーを、東京で。
-      %p.submit
-        %a.submit{href: "form"}
-          プロジェクトを提案
-
-    .detail
-      %img.logo{src: "/images/logo.png"}
+    #header-wrapper
+      #header.container
+        #logo
+          %h1
+            %a{href: '#'}
+              Toungue-ya
+        #menu
+          %ul
+            - %W(About Project Company Contact).each.with_index(1) do |name, i|
+              %li
+                %a{href: '#', accesskey: "#{i}", title: ""}
+                  = "#{name}"
+        #banner.container
+          .title
+            %h2
+              別海ホタテバーガーを、東京で。
+            %span.byline
+              忘れられない思い出の料理を、あなたの側で。
+          %ul.actions
+            %li
+              %a.button{href: '#'}
+                思い出を再現する
+    #wrapper
+      #three-column.container
+        .title
+          %img{src: "images/logo.png"}
+          %h2
+            Tongue-ya (たんや) とは
+          %span.byline
+            (一言で説明できる内容)(一言で説明できる内容)(一言で説明できる内容)
+        - d = "さらに詳しく"
+        .boxA
+          %p
+            (特徴その1)(特徴その1)(特徴その1)(特徴その1)(特徴その1)(特徴その1)
+          %a.button.button-alt{href: '#'}
+            = d
+        .boxB
+          %p
+            (特徴その2)(特徴その2)(特徴その2)(特徴その2)(特徴その2)(特徴その2)
+          %a.button.button-alt{href: '#'}
+            = d
+        .boxC
+          %p
+            (特徴その3)(特徴その3)(特徴その3)(特徴その3)(特徴その3)(特徴その3)
+          %a.button.button-alt{href: '#'}
+            = d
+    #welcome
+      .container
+        .title
+          %h2
+            あなたの食べたい味を教えてください。
+          %span.byline
+            私たちTongue-yaは、あなたの思い出を応援します。
+        (さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)(さらに詳しい説明)
+        %ul.actions
+          %li
+            %a.button{href: '#'}
+              思い出を再現する
+    #copylight.container
+      %p
+        &copy; Tongue-ya. All rights reserved.
+        Design by
+        %a{href: "http://templated.co", rel: "nofollow"}
+          TEMPLATED.

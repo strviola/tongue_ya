@@ -17,6 +17,8 @@ class Server < Sinatra::Base
 
   # images
   use Rack::Static, urls: ['/images'], root: 'views'
+  # css
+  use Rack::Static, urls: ['/stylesheets'], root: 'views'
 end
 
 Server.run!
