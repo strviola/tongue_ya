@@ -7,11 +7,14 @@ require 'pry'
 
 class Server < Sinatra::Base
   get '/' do
-    @text = "#{Time.now}"
     haml :index
   end
 
-  get '/stylesheets/main.css' do
+  get '/submit' do
+    haml :submit
+  end
+
+  get '/assets/main.css' do
     sass :'assets/css/main'
   end
 

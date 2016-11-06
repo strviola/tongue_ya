@@ -1,0 +1,27 @@
+!!!
+%html
+  = haml :headtag
+  %link{rel: "stylesheet", href: "assets/main.css"}
+
+  %body
+    = haml :header
+
+    #wrapper
+      .container.form
+        .title
+          %h2
+            あなたの食べたい味を教えてください。
+        %form{action: '#', name: "project_submit_form"}
+          %p
+            お名前:
+            %input{type: "text", name: "name"}
+          %p
+            メールアドレス:
+            %input{type: "email", name: "email"}
+          %p
+            内容:
+            %textarea{name: "body", rows: 6, cols: 80}
+          %p
+            %input{type: "submit", value: "送信"}
+
+    = haml :footer
